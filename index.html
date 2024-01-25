@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Form Validation</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+        
+      <form action="">
+        <h1>Customer Information Form</h1>
+      <h4>
+        Please fill out thr customer information from below to join. Fields
+        marked with a red star are mandatory
+      </h4>
+        
+        <div class="nameee">
+
+            <label for="customer_name">Customer Name</label>
+            <div class="namee">
+        <select name="customer_name" id="customer_name">
+          <option value="Mr.">Mr.</option>
+          <option value="Mrs.">Mrs.</option>
+          <option value="Ms.">Ms.</option>
+          <option value="Thiru.">Thiru.</option>
+        </select>
+        <input type="text" name="firstname" size="30" id="customer_name" />
+        <input type="text" name="lastname" size="25" id="customer_name" />
+    </div>
+    </div>
+        <br />
+        <div class="adrs">
+        <label for="address">Customer Address</label>
+        <div class="adrss">
+        <input
+          type="text"
+          id="address"
+          size="73"
+          placeholder="Street Address"
+        />
+        
+        <input
+          type="text"
+          id="address"
+          size="73"
+          placeholder="Stert Address Line 2"
+        />
+    </div>
+    </div>
+        <div class="cityy">
+        <br />
+        <input type="text" id="city" name="city" , placeholder="City" size="33"/>
+        <input type="text" id="region" name="region" placeholder="Region" size="33"/>
+        <br />
+    </div>
+        <div class="contact">
+        <input
+          type="number"
+          id="postalcode"
+          name="postalcode"
+          placeholder="Postal/Zip Code"
+        
+          style="width: 250px;"
+        />
+        <select name="country" id="country" aria-placeholder="Country"  style="width: 250px;">
+          <option value="" selected disabled hidden>Select the Country</option>
+          <option value="india">India</option>
+          <option value="china">China</option>
+          <option value="japan">Japan</option>
+        </select>
+    </div>
+        
+        <div class="contact">
+          <div class="con1">
+            <label for="phone">Customer Phone</label>
+            <input type="number" id="phone" placeholder="987 654 3210" style="width: 247px;" />
+          </div>
+          <div class="con1">
+            <label for="fax">Customer Fax</label> 
+            <input type="number" id="fax" placeholder="### ### ####" style="width: 247px;"/>
+          </div>
+        </div>
+
+        <div class="contact"> 
+            <div class="con1">
+                <label for="dob">Date of Birth</label>
+                <input type="date" pattern="india" size="33" style="width: 247px;">
+            </div>
+            <div class="con1">
+                <label for="email">Customer ID/Email</label>
+                <input type="text" placeholder="abcd@gmail.com" size="33" style="width: 247px;">
+            </div>
+        </div>
+        <br>
+        <h4> 
+            All customer information will be kept with descretion and will not be used for other marketing or advertisement purposes without customer approval.</h4>
+        <label > <input type="checkbox" id="agreement">I allow my information to be used for future campaingns</label>
+        <button class="buttonn"> SEND INFORMATION</button>
+      </form>
+    </div>
+    
+
+    <script src="script.js" async defer></script>
+  </body>
+</html>
