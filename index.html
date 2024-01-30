@@ -14,100 +14,180 @@
   </head>
   <body>
     <div class="container">
-        
-      <form action="">
+      <div id="floating">Succesfully Submitted
+        <button id="okk" onclick="reload()">OK</button>
+      </div>
+      <form action="" name="myForm" >
         <h1>Customer Information Form</h1>
-      <h4>
-        Please fill out thr customer information from below to join. Fields
-        marked with a red star are mandatory
-      </h4>
-        
-        <div class="nameee">
+        <h4>
+          Please fill out thr customer information from below to join. Fields
+          marked with a red star are mandatory
+        </h4>
 
-            <label for="customer_name">Customer Name</label>
-            <div class="namee">
-        <select name="customer_name" id="customer_name">
-          <option value="Mr.">Mr.</option>
-          <option value="Mrs.">Mrs.</option>
-          <option value="Ms.">Ms.</option>
-          <option value="Thiru.">Thiru.</option>
-        </select>
-        <input type="text" name="firstname" size="30" id="customer_name" />
-        <input type="text" name="lastname" size="25" id="customer_name" />
-    </div>
-    </div>
+        <div class="nameee">
+          <label for="customer_name">Customer Name</label>
+          <div class="namee">
+            <select name="customer_name" id="customer_name">
+              <option value="Mr.">Mr.</option>
+              <option value="Mrs.">Mrs.</option>
+              <option value="Ms.">Ms.</option>
+              <option value="Thiru.">Thiru.</option>
+            </select>
+            <div id="name_span">
+              <input type="text" name="name" size="30" id="customer_nameee" />
+              <p id="name_text"></p>
+            </div>
+            <input type="text" name="lastname" size="25" id="customer_na" />
+          </div>
+        </div>
         <br />
         <div class="adrs">
-        <label for="address">Customer Address</label>
-        <div class="adrss">
-        <input
-          type="text"
-          id="address"
-          size="73"
-          placeholder="Street Address"
-        />
-        
-        <input
-          type="text"
-          id="address"
-          size="73"
-          placeholder="Stert Address Line 2"
-        />
-    </div>
-    </div>
+          <label for="address">Customer Address</label>
+          <div class="adrss">
+            <div id="adrs_span">
+              <input
+                type="text"
+                id="addresss"
+                size="73"
+                placeholder="Street Address"
+              />
+              <p id="adrs_text"></p>
+            </div>
+
+            <input
+              type="text"
+              id="address"
+              size="73"
+              placeholder="Street Address Line 2"
+            />
+          </div>
+        </div>
         <div class="cityy">
-        <br />
-        <input type="text" id="city" name="city" , placeholder="City" size="33"/>
-        <input type="text" id="region" name="region" placeholder="Region" size="33"/>
-        <br />
-    </div>
+          <br />
+          <input
+            type="text"
+            id="city"
+            name="city"
+            ,
+            placeholder="City"
+            size="33"
+          />
+          <input
+            type="text"
+            id="region"
+            name="region"
+            placeholder="Region"
+            size="33"
+          />
+          <br />
+        </div>
         <div class="contact">
-        <input
-          type="number"
-          id="postalcode"
-          name="postalcode"
-          placeholder="Postal/Zip Code"
-        
-          style="width: 250px;"
-        />
-        <select name="country" id="country" aria-placeholder="Country"  style="width: 250px;">
-          <option value="" selected disabled hidden>Select the Country</option>
-          <option value="india">India</option>
-          <option value="china">China</option>
-          <option value="japan">Japan</option>
-        </select>
-    </div>
-        
+          <div id="postal_span">
+          <input
+            type="number"
+            id="postalcode"
+            name="postalcode"
+            placeholder="Postal/Zip Code"
+            style="width: 250px"
+            oninput="validatePostal(this)"
+          />
+          <p id="postal_text"></p>
+        </div>
+          <select
+            name="country"
+            id="country"
+            aria-placeholder="Country"
+            style="width: 250px"
+          >
+            <option value="" selected disabled hidden>
+              Select the Country
+            </option>
+            <option value="india">India</option>
+            <option value="china">China</option>
+            <option value="japan">Japan</option>
+          </select>
+        </div>
+
         <div class="contact">
           <div class="con1">
             <label for="phone">Customer Phone</label>
-            <input type="number" id="phone" placeholder="987 654 3210" style="width: 247px;" />
+            <div id="phone_span">
+            <input
+              type="number"
+              id="phone"
+              placeholder="987 654 3210"
+              style="width: 252px"
+              oninput="validPhone(this)"
+            /></div>
+            <p id="phone_text"></p>
+          </div>
+          
+          <div class="con1" id="faxx">
+            
+            <label for="fax">Customer Fax</label>
+            <div class="fax_div">
+              <select name="country_code" class="country_code">
+                <option value="+91">+91</option>
+                <option value="+44">+44</option>
+                <option value="+73">+73</option>
+              </select>
+              <div id="fax_span">
+            <input
+              type="number"
+              id="fax"
+              placeholder="### ### ####"
+              style="width: 198px"
+
+              oninput="validFax(this)"
+            />
+            <p id="fax_text"></p>
+          </div></div>
+          </div>
+        </div>
+
+        <div class="contact">
+          <div class="con1" id="con1">
+            <label for="dob">Date of Birth</label>
+            <div id="dob_span">
+            <input 
+             type="date"
+              id="dob"
+               pattern="india"
+                size="33" 
+                style="width: 247px" 
+                value="none"
+                />
+              <p id="dob_text"></p>
+              </div>
           </div>
           <div class="con1">
-            <label for="fax">Customer Fax</label> 
-            <input type="number" id="fax" placeholder="### ### ####" style="width: 247px;"/>
+            <label for="email">Customer ID/Email</label>
+            <div id ="email_span">
+            <input
+              id="email"
+              type="text"
+              placeholder="abcd@gmail.com"
+              size="33"
+              style="width: 247px"
+            />'
+          <p id="email_text"></p>
+          </div>
           </div>
         </div>
-
-        <div class="contact"> 
-            <div class="con1">
-                <label for="dob">Date of Birth</label>
-                <input type="date" pattern="india" size="33" style="width: 247px;">
-            </div>
-            <div class="con1">
-                <label for="email">Customer ID/Email</label>
-                <input type="text" placeholder="abcd@gmail.com" size="33" style="width: 247px;">
-            </div>
-        </div>
-        <br>
-        <h4> 
-            All customer information will be kept with descretion and will not be used for other marketing or advertisement purposes without customer approval.</h4>
-        <label > <input type="checkbox" id="agreement">I allow my information to be used for future campaingns</label>
-        <button class="buttonn"> SEND INFORMATION</button>
+        <br />
+        <h4>
+          All customer information will be kept with descretion and will not be
+          used for other marketing or advertisement purposes without customer
+          approval.
+        </h4>
+        <label>
+          <input type="checkbox" id="agreement" onchange="document.getElementById('btn').disabled = !this.checked;" onclick="acceptance()"/>I allow my information to be
+          used for future campaingns</label
+        >
+        <button type="submit" class="buttonn" id="btn"  onclick="return validateForm(event)" disabled>Submit</button>
       </form>
     </div>
-    
 
-    <script src="script.js" async defer></script>
+    <script src="script.js"></script>
   </body>
 </html>

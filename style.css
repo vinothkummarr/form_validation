@@ -12,7 +12,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;   
+    height: fit-content;   
     font-family: 'Roboto', sans-serif;
     
 }
@@ -24,7 +24,7 @@ form{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;   
+    height: fit-content;   
     font-family: 'Roboto', sans-serif;
     width: 600px;
     text-align: start;
@@ -48,8 +48,14 @@ input::-webkit-inner-spin-button {
     justify-content: flex-start;
     flex-wrap: wrap;
 }
-input, select{
+input{
     height: 25px;
+    border-radius: 7px;
+    background-color: rgb(238, 245, 255,0.5);
+    border: solid  1px black;
+}
+select{
+    height: 30px;
     border-radius: 7px;
     background-color: rgb(238, 245, 255,0.5);
     border: solid  1px black;
@@ -76,6 +82,11 @@ label{
     flex-direction: column;
     justify-content: flex-start;
     gap: -20px;
+    
+}
+
+.fax_div{
+    display: flex;
 }
 h4{
     margin: 10px 40px;
@@ -98,5 +109,42 @@ input[type="checkbox"]{
     font-weight: bold;
     padding: 10px 20px;
     margin-top: 30px;
+    margin-bottom: 30px;
+}
+p{
+    color: red;
+    font-size: 13px;
+    margin: 0;
+    font-weight: bold;
 }
 
+.popup{
+    position: relative;
+    }
+
+#floating{
+    background-color: #034a32;
+    position: absolute;
+  width: 400px;
+  height: 200px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 10px;
+}
+
+#okk{
+    color: black;
+    border: none;
+    background-color: #afbfb9;
+    font-size: medium;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
